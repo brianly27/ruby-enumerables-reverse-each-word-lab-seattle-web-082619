@@ -16,11 +16,19 @@
 #   end
 # end
 
+# def reverse_each_word(str)
+#   string = str.split(" ")
+#   reversed_arr = []
+#   string.each do |e|
+#     reversed_arr << e.reverse
+#   end
+#   reversed_arr.join(' ')
+# end
+
 def reverse_each_word(str)
   string = str.split(" ")
-  reversed_arr = []
-  string.each do |e|
-    reversed_arr << e.reverse
+  reversed_arr = string.collect do |word|
+    word.reverse
   end
   reversed_arr.join(' ')
 end
